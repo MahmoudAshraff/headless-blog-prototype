@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "slug": "getting-started-with-vanilla-js",
+        "title": "Mastering the Pure Power of Vanilla JavaScript",
+        "author": "A. Developer",
+        "date": "2025-10-20",
+        "summary": "A deep dive into modern JS features like Fetch and async/await, proving you don't always need a framework.",
+        "content_body": "<h2>The Fetch API: Your Data Gateway</h2><p>In modern web development, the native <strong>Fetch API</strong> replaces older methods like XMLHttpRequest. It returns Promises, making it perfect for use with <code>async/await</code> for clean, readable code. This is the exact method we use in this project to simulate fetching data from a CMS.</p><h3>Why use Vanilla JS?</h3><p>Understanding the DOM and native browser APIs is the foundation for any framework. This project demonstrates strong core skills, ensuring you're not just relying on a framework's abstraction layer.</p>",
+        "image_url": "https://via.placeholder.com/800x400/007bff/FFFFFF?text=Vanilla+JS+Core"
+    },
+    {
+        "id": 2,
+        "slug": "css-architecture-for-scalability",
+        "title": "BEM and CSS Variables: Scaling Your Styles",
+        "author": "C. Designer",
+        "date": "2025-11-05",
+        "summary": "Learn how Block-Element-Modifier (BEM) and CSS Variables create maintainable, predictable styles for large projects.",
+        "content_body": "<h2>BEM Naming Convention</h2><p>BEM makes CSS class names extremely transparent: <code>.block__element--modifier</code>. This clarity is crucial for a development team. For example, <code>.button--primary</code> clearly indicates the primary variant of the button block.</p><h3>The Power of CSS Variables</h3><p>CSS variables (Custom Properties) allow you to define site-wide styles like colors and fonts in one place. Changing a single variable instantly updates the entire site, which is essential for theme toggling or branding updates.</p>",
+        "image_url": "https://via.placeholder.com/800x400/28a745/FFFFFF?text=CSS+Architecture"
+    }
+]

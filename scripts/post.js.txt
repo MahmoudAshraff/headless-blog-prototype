@@ -1,0 +1,50 @@
+// Re-declare the fetch function here (or import it if using module scripts, but keeping it simple)
+async function fetchPosts() {
+    // Note: We use the absolute path from the root folder
+    const response = await fetch('data/posts.json');
+    return response.json();
+}
+
+// Function to extract the unique identifier (slug) from the current URL
+function getPostSlugFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('slug');
+}
+
+async function renderSinglePost() {
+    const slug = getPostSlugFromUrl();
+    const posts = await fetchPosts();
+    const post = posts.find(p => p.slug === slug);
+    const container = document.getElementById('post-container');
+
+    if (!post) {
+        container.innerHTML = '<h1>Post Not Found</h1><p>The article you are looking for does not exist.</p><a href="index.html">Go Home</a>';
+        document.title = "Post Not Found";
+        return;
+    }
+
+    // Dynamic Title Update: Good for SEO simulation
+    document.title = post.title + " | Headless Blog";
+
+    // Insert the structured content into the container
+    container.innerHTML = `
+        <article class="single-post">
+            <header class="single-post__header">
+                <img src="${post.image_url}" alt="${post.title}" class="single-post__image">
+                <h1 class="single-post__title">${post.title}</h1>
+                <p class="single-post__meta">By <strong>${post.author}</strong> on ${new Date(post.date).toLocaleDateString()}</p>
+            </header>
+            
+            <div class="single-post__content">
+                ${post.content_body}
+            </div>
+
+            <footer class="single-post__footer">
+                <a href="index.html" class="back-link">&larr; Back to Blog Home</a>
+            </footer>
+        </article>
+    `;
+}
+
+// Initialize the single post view
+renderSinglePost();

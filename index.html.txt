@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headless CMS Blog Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Vanilla Headless Blog</h1>
+        <p>A portfolio piece showcasing pure JS, HTML, and CSS.</p>
+    </header>
+
+    <main class="post-list-grid" id="post-list">
+        <p>Loading posts...</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Headless Blog Prototype. Built with 💖 and Vanilla JS.</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
